@@ -42,4 +42,8 @@ export class CategoriaService {
       },
     });
   }
+
+  async create(categoria: Categoria): Promise<Categoria> {
+    return await this.categoriaRepository.save(categoria);
+  }
 }
