@@ -58,4 +58,9 @@ export class CategoriaController {
   delete(@Param('id', ParseIntPipe) id: number) {
     return this.categoriaService.delete(id);
   }
+
+  @Get('/busca-global/:termo')
+  findAllByGlobal(@Param('termo') termo: string): Promise<Categoria[]> {
+    return this.categoriaService.findAllByGlobal(termo);
+  }
 }

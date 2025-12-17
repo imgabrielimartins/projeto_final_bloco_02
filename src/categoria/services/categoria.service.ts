@@ -56,4 +56,13 @@ export class CategoriaService {
     await this.findById(id);
     return await this.categoriaRepository.delete(id);
   }
+
+  async findAllByGlobal(termo: string): Promise<Categoria[]> {
+    return await this.categoriaRepository.find({
+      where: [
+        { titulo: ILike(`%${termo}%`) },
+        { descricao: ILike(`%${termo}%`) },
+      ],
+    });
+  }
 }

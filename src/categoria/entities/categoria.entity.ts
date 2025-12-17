@@ -1,6 +1,7 @@
 import { IsNotEmpty } from 'class-validator';
 import {
   Column,
+  DeleteDateColumn,
   Entity,
   PrimaryGeneratedColumn,
   UpdateDateColumn,
