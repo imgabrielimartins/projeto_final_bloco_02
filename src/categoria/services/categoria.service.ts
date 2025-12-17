@@ -34,4 +34,12 @@ export class CategoriaService {
       },
     });
   }
+
+  async FindAllBySector(setor: string): Promise<Categoria[]> {
+    return await this.categoriaRepository.find({
+      where: {
+        setor: ILike(`${setor}`),
+      },
+    });
+  }
 }

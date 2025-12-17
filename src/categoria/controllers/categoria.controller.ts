@@ -30,4 +30,10 @@ export class CategoriaController {
   findByAllTitle(@Param('titulo') titulo: string): Promise<Categoria[]> {
     return this.categoriaService.findAllByTitle(titulo);
   }
+
+  @Get('/setor/:setor')
+  @HttpCode(HttpStatus.OK)
+  findByAllSector(@Param('setor') setor: string): Promise<Categoria[]> {
+    return this.categoriaService.FindAllBySector(setor);
+  }
 }
