@@ -34,8 +34,8 @@ descricao: Descrição detalhada da categoria (opcional).
 
 Pré-requisitos
 
-Node.js (v16 ou superior)
+Node.js 
 
-NPM ou Yarn
+NPM
 
 Uma instância de base de dados SQL ativa
