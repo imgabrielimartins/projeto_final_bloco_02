@@ -1,99 +1,48 @@
-# 💊 Pharmacy Backend API
+💊 Sistema de Gerenciamento de Farmácia - API
 
-API RESTful desenvolvida com **NestJS** para gerenciar o sistema de uma farmácia, incluindo controle de produtos, categorias, usuários e pedidos.
+Este projeto é uma API REST desenvolvida para gerenciar as categorias de uma farmácia. Ele permite o controle total sobre os setores e descrições dos produtos, incluindo buscas avançadas e documentação interativa.
 
-Este projeto foi criado com foco em arquitetura escalável, organização modular e boas práticas de desenvolvimento backend.
+🚀 Funcionalidades
 
----
+O sistema conta com 8 métodos principais para manipulação da tabela de categorias:
 
-## 📖 Sobre o Projeto
+Listar Todas: Retorna todas as categorias cadastradas.
 
-O **Pharmacy Backend** é responsável por toda a lógica de negócio e gerenciamento de dados da aplicação de farmácia.
+Consultar por ID: Busca detalhada de uma categoria específica via identificador numérico.
 
-A API permite:
+Consultar por Título: Busca exata ou parcial por nomes de categorias.
 
-- Cadastro e listagem de medicamentos  
-- Gerenciamento de categorias  
-- Controle de estoque  
-- Cadastro de usuários  
-- Processamento de pedidos  
+Consultar por Setor: Filtra categorias baseadas na área da farmácia (Ex: Higiene, Medicamentos).
 
-O projeto foi estruturado utilizando a arquitetura modular do NestJS, garantindo organização, manutenibilidade e escalabilidade.
+Pesquisa Global (OR): Filtro avançado que busca um termo simultaneamente no titulo e na descricao.
 
----
+Cadastrar Categoria: Inclusão de novos registros com validação de dados.
 
-## 🚀 Tecnologias Utilizadas
+Atualizar Categoria: Edição de informações existentes.
 
-- **NestJS**
-- **Node.js**
-- **TypeScript**
-- **Prisma ou TypeORM** (ajuste conforme utilizado)
-- **PostgreSQL / MySQL** (ajuste conforme seu banco)
-- **JWT** (se houver autenticação)
-- **Class Validator**
-- **Insomnia / Postman** para testes
+Remover Categoria: Exclusão definitiva de registros do banco de dados.
 
----
+🛠️ Tecnologias e Ferramentas
 
-## 🧠 Conceitos Aplicados
+Framework: NestJS (Node.js)
 
-- Arquitetura modular com NestJS  
-- Injeção de dependência  
-- DTOs e validação de dados  
-- Padrão REST  
-- Tratamento de exceções  
-- Middleware e Guards (se implementado)  
-- Autenticação e autorização com JWT (se implementado)  
-- Integração com banco de dados  
+Linguagem: TypeScript
 
----
+ORM: TypeORM
 
-## 📂 Estrutura do Projeto
+Banco de Dados: MySQL
 
-```bash
-src/
- ├── modules/
- │    ├── products/
- │    ├── categories/
- │    ├── users/
- │    └── orders/
- ├── common/
- ├── config/
- ├── app.module.ts
- └── main.ts
-```
-----
+Documentação: Swagger
 
-```
-# Clonar o repositório
-git clone https://github.com/seu-usuario/farmacia-nest.git
+Testes de API: Insomnia 
 
-# Entrar na pasta
-cd nome-do-projeto
+📖 Como usar a Documentação (Swagger)
 
-# Instalar dependências
-npm install
+A API possui uma interface visual para testes. Ao rodar o projeto, acesse http://localhost:4000/swagger.
 
-# Rodar em ambiente de desenvolvimento
-npm run start:dev
-```
-----
+Identificação: Cada método possui uma cor (Verde para criar, Azul para ler, Laranja para editar e Vermelho para excluir).
 
-# 📈 Próximas Melhorias
+Testes: Clique em "Experimente!", preencha os campos necessários (como id ou termo) e clique em Executar para ver o resultado em tempo real.
 
-Implementar testes unitários e e2e
-
-Sistema de permissões por perfil
-
-Logs estruturados
-
-Deploy com Docker 
-
----
-
-# 👩‍💻 Autora
-
-Gabrieli Martins
-
-LinkedIn: https://linkedin.com/in/gabrielimartinsdev
-
+✒️ Autora 
+Gabrieli Martins -(https://github.com/imgabrielimartins)
